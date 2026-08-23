@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amal Santhosh Kumar | Electrical & IT Engineering</title>
-    <meta name="description" content="Profile of Amal Santhosh Kumar - Electrical & IT Engineering Student, OVGU Magdeburg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --secondary: #64748b;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --text-light: #64748b;
-            --border: #e2e8f0;
-            --accent: #3b82f6;
-            --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.08), 0 5px 10px rgba(0,0,0,0.04);
+            --bg: #1a1a1a;
+            --text: #ffffff;
+            --text-dim: #b3b3b3;
+            --accent: #ffffff;
+            --border: rgba(255,255,255,0.1);
         }
 
         * {
@@ -27,485 +23,319 @@
         }
 
         body {
-            font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
-            color: white;
-            padding: 60px 20px 50px;
-            text-align: center;
-        }
-
-        .hero-avatar {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 4px solid rgba(255,255,255,0.4);
-            margin: 0 auto 20px;
-            object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .hero h2 {
-            font-size: 1.15rem;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-
-        .hero-links {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .hero-links a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 18px;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 8px;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-            backdrop-filter: blur(5px);
-            background: rgba(255,255,255,0.08);
-        }
-
-        .hero-links a:hover {
-            background: rgba(255,255,255,0.2);
-            border-color: rgba(255,255,255,0.5);
-            transform: translateY(-1px);
-        }
-
-        /* Container */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
             padding: 40px 20px;
         }
 
-        /* Section */
-        .section {
-            margin-bottom: 48px;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .section-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .section-title .icon {
-            font-size: 1.4rem;
-        }
-
-        /* About */
-        .about-text {
-            font-size: 1rem;
-            color: var(--text);
-            line-height: 1.8;
-        }
-
-        .about-text strong {
-            color: var(--primary-dark);
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 16px;
-        }
-
-        .tag {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            box-shadow: var(--shadow);
-        }
-
-        /* Cards */
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 16px;
-            box-shadow: var(--shadow);
-            transition: box-shadow 0.2s, transform 0.2s;
-        }
-
-        .card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-2px);
-        }
-
-        .card-header {
+        /* Header */
+        header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            margin-bottom: 60px;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 8px;
+            gap: 20px;
         }
 
-        .card-title {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text);
+        .header-left h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
         }
 
-        .card-subtitle {
-            font-size: 0.9rem;
-            color: var(--text-light);
+        .header-left h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--text-dim);
         }
 
-        .card-date {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            white-space: nowrap;
+        .header-right {
+            text-align: right;
         }
 
-        .card-body {
-            font-size: 0.95rem;
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        .card-body ul {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-
-        .card-body li {
-            margin-bottom: 4px;
-        }
-
-        .card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 12px;
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .card-link:hover {
-            color: var(--primary-dark);
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-        }
-
-        .skill-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 18px;
-            box-shadow: var(--shadow);
-        }
-
-        .skill-card h4 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--primary-dark);
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
             margin-bottom: 10px;
         }
 
-        .skill-card p {
-            font-size: 0.88rem;
-            color: var(--text-light);
-            line-height: 1.6;
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
         }
 
-        /* Education */
-        .edu-item {
-            margin-bottom: 16px;
+        .social-icons a:hover {
+            opacity: 1;
         }
 
-        .edu-item:last-child {
-            margin-bottom: 0;
+        .contact-info {
+            font-size: 0.9rem;
+            color: var(--text-dim);
         }
 
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: var(--text-light);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border);
-            margin-top: 20px;
-        }
-
-        .footer a {
-            color: var(--primary);
+        .contact-info a {
+            color: var(--text-dim);
             text-decoration: none;
         }
 
-        .footer a:hover {
+        .contact-info a:hover {
             text-decoration: underline;
         }
 
+        /* Section Headings */
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--text-dim);
+            margin: 40px 0 20px;
+            position: relative;
+        }
+
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+            z-index: -1;
+        }
+
+        .section-title span {
+            background: var(--bg);
+            padding: 0 20px;
+        }
+
+        .separator {
+            width: 100%;
+            height: 1px;
+            border-top: 1px dashed var(--border);
+            margin: 20px 0;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 30px;
+        }
+
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: grayscale(20%);
+        }
+
+        .about-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        .about-content p {
+            color: var(--text-dim);
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .interests-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest-tag {
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            font-size: 0.85rem;
+            color: var(--text);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Experience Items */
+        .exp-item {
+            margin-bottom: 40px;
+        }
+
+        .exp-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .exp-item .role {
+            font-size: 1rem;
+            color: var(--text);
+            font-weight: 500;
+            margin: 5px 0;
+        }
+
+        .exp-item .date {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 10px;
+        }
+
+        .exp-item ul {
+            list-style: none;
+            padding-left: 15px;
+        }
+
+        .exp-item li {
+            position: relative;
+            margin-bottom: 8px;
+            color: var(--text-dim);
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+
+        .exp-item li::before {
+            content: "•";
+            position: absolute;
+            left: -15px;
+            color: var(--text);
+        }
+
+        /* Hobbies */
+        .hobbies {
+            text-align: center;
+            color: var(--text-dim);
+            font-weight: 300;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
         /* Responsive */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 1.6rem; }
-            .hero h2 { font-size: 1rem; }
-            .container { padding: 30px 16px; }
-            .card { padding: 18px; }
-            .skills-grid { grid-template-columns: 1fr; }
+        @media (max-width: 768px) {
+            .header-right { text-align: left; }
+            .social-icons { justify-content: flex-start; }
+            .about-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+            .social-icons { margin-top: 10px; }
         }
     </style>
 </head>
 <body>
 
-<!-- Hero -->
-<div class="hero">
-    <img class="hero-avatar" src="profile_photo.png" alt="Amal Santhosh Kumar">
-    <h1>Amal Santhosh Kumar</h1>
-    <h2>Electrical &amp; IT Engineering Student | OVGU Magdeburg, Germany</h2>
-    <div class="hero-links">
-        <a href="mailto:amalsant19@gmail.com">📧 Email</a>
-        <a href="https://github.com/amalsant19-web" target="_blank">💻 GitHub</a>
-        <a href="https://linkedin.com/in/amal-santhosh-kumar-" target="_blank">💼 LinkedIn</a>
-    </div>
-</div>
-
 <div class="container">
+    <header>
+        <div class="header-left">
+            <h1>Amal Santhosh Kumar</h1>
+            <h2>Electrical & IT Engineering</h2>
+        </div>
+        <div class="header-right">
+            <div class="social-icons">
+                <a href="https://github.com/amalsant19-web" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/amal-santhosh-kumar-" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:amalsant19@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="contact-info">
+                Email: <a href="mailto:amalsant19@gmail.com">amalsant19@gmail.com</a><br>
+                Web: <a href="https://amalsant19-web.github.io/profile/">https://amalsant19-web.github.io/profile/</a>
+            </div>
+        </div>
+    </header>
 
-    <!-- About -->
-    <div class="section">
-        <h3 class="section-title"><span class="icon">👤</span> About</h3>
-        <p class="about-text">
-            Electrical &amp; IT Engineering student at <strong>Otto-von-Guericke University, Magdeburg</strong>, motivated by how connected technologies shape smarter mobility and automation. Experienced in custom software engineering at <strong>Accenture</strong>, with a strong foundation in SQL-based data integration and process optimization. Hands-on expertise in control systems, embedded automation, IoT-based agricultural technology, and AI-driven applications. Proven ability in system-level thinking, careful testing, and adaptability in multidisciplinary environments.
-        </p>
-        <div class="tags">
-            <span class="tag">Control Systems</span>
-            <span class="tag">Embedded Automation</span>
-            <span class="tag">IoT</span>
-            <span class="tag">Signal Processing</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Python</span>
-            <span class="tag">MATLAB / Simulink</span>
-            <span class="tag">AI / ML</span>
-            <span class="tag">Raspberry Pi</span>
-            <span class="tag">Arduino</span>
+    <h2 class="section-title"><span>About</span></h2>
+    <div class="separator"></div>
+    
+    <div class="about-grid">
+        <img src="profile_photo.png" alt="Amal Santhosh Kumar" class="profile-pic">
+        <div class="about-content">
+            <p>
+                Hi! I am Amal Santhosh Kumar, an Electrical & IT Engineering student at <strong>Otto-von-Guericke University, Magdeburg</strong>. 
+                I am passionate about how connected technologies shape smarter mobility and automation. 
+            </p>
+            <p>
+                Experienced with developing automation solutions, control systems, and data-driven applications. I have professional experience from <strong>Accenture</strong> in software engineering and SQL-based data optimization. I am fascinated by IoT, AI, and systems that push the boundaries of modern agriculture and robotics.
+            </p>
+            <h3>My interests:</h3>
+            <div class="interests-tags">
+                <div class="interest-tag">Control Systems</div>
+                <div class="interest-tag">Embedded Automation</div>
+                <div class="interest-tag">IoT</div>
+                <div class="interest-tag">Signal Processing</div>
+                <div class="interest-tag">SQL</div>
+                <div class="interest-tag">Python</div>
+                <div class="interest-tag">MATLAB</div>
+                <div class="interest-tag">Simulink</div>
+                <div class="interest-tag">AI/ML</div>
+                <div class="interest-tag">Digital Twins</div>
+            </div>
+            <p style="margin-top: 20px; font-style: italic;">Get in touch!</p>
         </div>
     </div>
 
-    <!-- Experience -->
-    <div class="section">
-        <h3 class="section-title"><span class="icon">💼</span> Experience</h3>
+    <h2 class="section-title"><span>Experience</span></h2>
+    <div class="separator"></div>
 
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="card-title">Custom Software Engineering Associate</div>
-                    <div class="card-subtitle">Accenture Solutions Ltd, Bengaluru, India</div>
-                </div>
-                <div class="card-date">Dec 2021 – Sep 2024</div>
-            </div>
-            <div class="card-body">
-                <ul>
-                    <li>Managed SQL-based data integration for supply-chain applications, improving product data accuracy through validation checks and query optimization.</li>
-                    <li>Developed and maintained SQL queries and reporting workflows, reducing manual data handling and improving reporting efficiency.</li>
-                    <li>Monitored and analyzed application performance, resolving system alerts and contributing to a <strong>12% reduction in recurring incidents</strong>.</li>
-                    <li>Prepared weekly technical and performance reports, improving cross-team visibility and supporting compliance and knowledge transfer.</li>
-                    <li>Collaborated with multidisciplinary teams to troubleshoot issues, improving turnaround time for support tickets by <strong>10%</strong>.</li>
-                </ul>
-            </div>
-        </div>
+    <div class="exp-item">
+        <h3>Accenture Solutions Ltd | Bengaluru, India</h3>
+        <div class="role">Custom Software Engineering Associate</div>
+        <div class="date">December 2021 - September 2024</div>
+        <ul>
+            <li>Managed SQL-based data integration for supply-chain applications, improving product data accuracy through validation checks and query optimization.</li>
+            <li>Developed and maintained SQL queries and reporting workflows, reducing manual data handling and improving reporting efficiency.</li>
+            <li>Monitored and analyzed application performance, resolving system alerts and contributing to a 12% reduction in recurring incidents.</li>
+            <li>Collaborated with multidisciplinary teams to troubleshoot issues and deliver timely solutions, improving turnaround time for support tickets by 10%.</li>
+        </ul>
     </div>
 
-    <!-- Projects -->
-    <div class="section">
-        <h3 class="section-title"><span class="icon">🚀</span> Projects</h3>
+    <h2 class="section-title"><span>Education</span></h2>
+    <div class="separator"></div>
 
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="card-title">🌱 Plant Box V2.0 — Controlled Environment Agriculture</div>
-                    <div class="card-subtitle">Raspberry Pi · IoT · Hydroponics · Climate Control</div>
-                </div>
-                <div class="card-date">B.Tech Project</div>
-            </div>
-            <div class="card-body">
-                Tabletop-sized automated CEA platform using Raspberry Pi 3, DWC hydroponics, LED grow lights, and IoT-based climate control via Adafruit IO. Closed-loop control for temperature, humidity, and pH using sensors (DHT22, DS18B20, pH) and actuators (Peltier, humidifier, peristaltic pumps).
-                <ul>
-                    <li><strong>95% less water</strong> consumption vs. conventional farming</li>
-                    <li><strong>30–50% faster</strong> growth rate than soil-grown plants</li>
-                    <li>Remote monitoring &amp; control via Adafruit IO dashboard</li>
-                </ul>
-                <a class="card-link" href="https://github.com/amalsant19-web/Plant-Box" target="_blank">🔗 View on GitHub</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="card-title">🤖 FRIDA Chatbot — AI for Radicalization Detection</div>
-                    <div class="card-subtitle">Python · FastAPI · Streamlit · Docker · LLM</div>
-                </div>
-                <div class="card-date">University Project</div>
-            </div>
-            <div class="card-body">
-                Bilingual (EN/DE) AI chatbot for early detection of radicalization using LLMs, VADER sentiment analysis, hate speech classification, and keyword extraction. Full-stack architecture with FastAPI backend, Streamlit UI, and Docker deployment. Includes user evaluation using UEQ+ methodology.
-                <a class="card-link" href="https://github.com/amalsant19-web/Chatbot-to-detect-Radicalization" target="_blank">🔗 View on GitHub</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="card-title">⚙️ Automation Lab — Temperature Control System</div>
-                    <div class="card-subtitle">MATLAB · Simulink · OPC UA · Node-RED</div>
-                </div>
-                <div class="card-date">University Lab</div>
-            </div>
-            <div class="card-body">
-                System identification (Least Squares, Tangent, Schwarze methods), PID controller design &amp; tuning (Ziegler-Nichols, TΣ, Opelt rules), frequency domain analysis, and industrial automation with OPC UA information modeling and Node-RED flow-based monitoring.
-                <a class="card-link" href="https://github.com/amalsant19-web/Automation-Lab" target="_blank">🔗 View on GitHub</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="card-title">📊 DIP Lab — Digital Signal Processing</div>
-                    <div class="card-subtitle">Python · NumPy · Matplotlib · DSP</div>
-                </div>
-                <div class="card-date">University Lab</div>
-            </div>
-            <div class="card-body">
-                Five modules covering sampling &amp; reconstruction, FFT/spectral analysis, STFT/spectrograms/phase vocoder, ECG signal filtering, and DTMF telecommunication signal decoding.
-                <a class="card-link" href="https://github.com/amalsant19-web/DIP-lab" target="_blank">🔗 View on GitHub</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="card-title">🧤 Assistive Hand Gesture Glove</div>
-                    <div class="card-subtitle">Arduino · IMU · Kalman Filter · 1-D CNN</div>
-                </div>
-                <div class="card-date">Seminar (Dec 2020)</div>
-            </div>
-            <div class="card-body">
-                Seminar on hand gesture recognition for hearing/speech impaired using IMU sensors (accelerometer + gyroscope), Kalman filtering for noise suppression, and 1-D Convolutional Neural Network for sign language classification. Output displayed as text and audio on smartphone via Bluetooth.
-                <a class="card-link" href="https://github.com/amalsant19-web/Assistive-Hand-Gesture-Glove" target="_blank">🔗 View on GitHub</a>
-            </div>
-        </div>
+    <div class="exp-item">
+        <h3>Otto-von-Guericke University (OVGU) | Magdeburg, Germany</h3>
+        <div class="role">Master of Science (M.Sc.) in Electrical Engineering and IT</div>
+        <div class="date">October 2023 - Present</div>
+        <ul>
+            <li>Focus: Control Engineering, Signal Processing</li>
+            <li>GPA: 2.8</li>
+        </ul>
     </div>
 
-    <!-- Skills -->
-    <div class="section">
-        <h3 class="section-title"><span class="icon">🔧</span> Technical Skills</h3>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h4>Control Systems</h4>
-                <p>PID controller design, system identification, frequency domain analysis, closed-loop control, loop shaping</p>
-            </div>
-            <div class="skill-card">
-                <h4>Embedded &amp; IoT</h4>
-                <p>Raspberry Pi, Arduino, ESP8266, sensor integration, Adafruit IO, relay control, Peltier modules</p>
-            </div>
-            <div class="skill-card">
-                <h4>Signal Processing</h4>
-                <p>FFT, DFT, STFT, filtering, Kalman filter, audio processing, ECG analysis, DTMF</p>
-            </div>
-            <div class="skill-card">
-                <h4>Software &amp; Tools</h4>
-                <p>Python, SQL, MATLAB, Simulink, C/C++, Git, Docker, FastAPI, Streamlit</p>
-            </div>
-            <div class="skill-card">
-                <h4>AI / ML</h4>
-                <p>1-D CNN, LLM integration, VADER sentiment analysis, classification, prompt engineering</p>
-            </div>
-            <div class="skill-card">
-                <h4>Automation</h4>
-                <p>OPC UA, Node-RED, UaModeler, industrial IoT, real-time monitoring</p>
-            </div>
-        </div>
+    <div class="exp-item">
+        <h3>Mar Baselios College of Engineering and Technology | Trivandrum, India</h3>
+        <div class="role">Bachelor of Technology (B.Tech) in Electrical and Electronics</div>
+        <div class="date">2017 - 2021</div>
+        <ul>
+            <li>APJ Abdul Kalam Technological University (KTU)</li>
+            <li>GPA: 2.3</li>
+        </ul>
     </div>
 
-    <!-- Education -->
-    <div class="section">
-        <h3 class="section-title"><span class="icon">🎓</span> Education</h3>
-
-        <div class="card">
-            <div class="edu-item">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">M.Sc. Electrical Engineering and Information Technology</div>
-                        <div class="card-subtitle">Otto-von-Guericke University (OVGU), Magdeburg, Germany</div>
-                    </div>
-                    <div class="card-date">Oct 2023 – Present</div>
-                </div>
-                <div class="card-body">
-                    <p>GPA: 2.8 | Focus: Control Engineering, Signal Processing</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="edu-item">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">B.Tech. Electrical and Electronics Engineering</div>
-                        <div class="card-subtitle">Mar Baselios College of Engineering and Technology, Trivandrum, Kerala, India</div>
-                    </div>
-                    <div class="card-date">2017 – 2021</div>
-                </div>
-                <div class="card-body">
-                    <p>GPA: 2.3 | APJ Abdul Kalam Technological University (KTU)</p>
-                </div>
-            </div>
-        </div>
+    <h2 class="section-title"><span>Hobbies</span></h2>
+    <div class="separator"></div>
+    <div class="hobbies">
+        Cycling 🚴, travelling ✈️, photography 📷, electronics DIY 🔧
     </div>
 
-    <!-- Languages -->
-    <div class="section">
-        <h3 class="section-title"><span class="icon">🌍</span> Languages</h3>
-        <div class="tags">
-            <span class="tag">🇬🇧 English — Fluent</span>
-            <span class="tag">🇩🇪 German — Intermediate</span>
-        </div>
-    </div>
-
-</div>
-
-<!-- Footer -->
-<div class="footer">
-    <p>Amal Santhosh Kumar — <a href="mailto:amalsant19@gmail.com">amalsant19@gmail.com</a></p>
-    <p style="margin-top: 4px;">Magdeburg, Germany</p>
+    <footer>
+        Amal Santhosh Kumar - amalsant19@gmail.com
+    </footer>
 </div>
 
 </body>
