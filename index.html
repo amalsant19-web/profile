@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amal Santhosh Kumar | Electrical & IT Engineering</title>
+    <meta name="description" content="Profile of Amal Santhosh Kumar - Electrical & IT Engineering Student, OVGU Magdeburg">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --accent: #3b82f6;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.08), 0 5px 10px rgba(0,0,0,0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
+            color: white;
+            padding: 60px 20px 50px;
+            text-align: center;
+        }
+
+        .hero-avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.4);
+            margin: 0 auto 20px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .hero h2 {
+            font-size: 1.15rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            backdrop-filter: blur(5px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .hero-links a:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-1px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title .icon {
+            font-size: 1.4rem;
+        }
+
+        /* About */
+        .about-text {
+            font-size: 1rem;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .about-text strong {
+            color: var(--primary-dark);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .tag {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            box-shadow: var(--shadow);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .card-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            white-space: nowrap;
+        }
+
+        .card-body {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .card-body ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .card-body li {
+            margin-bottom: 4px;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .card-link:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .skill-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Education */
+        .edu-item {
+            margin-bottom: 16px;
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.6rem; }
+            .hero h2 { font-size: 1rem; }
+            .container { padding: 30px 16px; }
+            .card { padding: 18px; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+    <img class="hero-avatar" src="profile_photo.png" alt="Amal Santhosh Kumar">
+    <h1>Amal Santhosh Kumar</h1>
+    <h2>Electrical &amp; IT Engineering Student | OVGU Magdeburg, Germany</h2>
+    <div class="hero-links">
+        <a href="mailto:amalsant19@gmail.com">📧 Email</a>
+        <a href="https://github.com/amalsant19-web" target="_blank">💻 GitHub</a>
+        <a href="https://linkedin.com/in/amal-santhosh-kumar-" target="_blank">💼 LinkedIn</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- About -->
+    <div class="section">
+        <h3 class="section-title"><span class="icon">👤</span> About</h3>
+        <p class="about-text">
+            Electrical &amp; IT Engineering student at <strong>Otto-von-Guericke University, Magdeburg</strong>, motivated by how connected technologies shape smarter mobility and automation. Experienced in custom software engineering at <strong>Accenture</strong>, with a strong foundation in SQL-based data integration and process optimization. Hands-on expertise in control systems, embedded automation, IoT-based agricultural technology, and AI-driven applications. Proven ability in system-level thinking, careful testing, and adaptability in multidisciplinary environments.
+        </p>
+        <div class="tags">
+            <span class="tag">Control Systems</span>
+            <span class="tag">Embedded Automation</span>
+            <span class="tag">IoT</span>
+            <span class="tag">Signal Processing</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">MATLAB / Simulink</span>
+            <span class="tag">AI / ML</span>
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">Arduino</span>
+        </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+        <h3 class="section-title"><span class="icon">💼</span> Experience</h3>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">Custom Software Engineering Associate</div>
+                    <div class="card-subtitle">Accenture Solutions Ltd, Bengaluru, India</div>
+                </div>
+                <div class="card-date">Dec 2021 – Sep 2024</div>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Managed SQL-based data integration for supply-chain applications, improving product data accuracy through validation checks and query optimization.</li>
+                    <li>Developed and maintained SQL queries and reporting workflows, reducing manual data handling and improving reporting efficiency.</li>
+                    <li>Monitored and analyzed application performance, resolving system alerts and contributing to a <strong>12% reduction in recurring incidents</strong>.</li>
+                    <li>Prepared weekly technical and performance reports, improving cross-team visibility and supporting compliance and knowledge transfer.</li>
+                    <li>Collaborated with multidisciplinary teams to troubleshoot issues, improving turnaround time for support tickets by <strong>10%</strong>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+        <h3 class="section-title"><span class="icon">🚀</span> Projects</h3>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🌱 Plant Box V2.0 — Controlled Environment Agriculture</div>
+                    <div class="card-subtitle">Raspberry Pi · IoT · Hydroponics · Climate Control</div>
+                </div>
+                <div class="card-date">B.Tech Project</div>
+            </div>
+            <div class="card-body">
+                Tabletop-sized automated CEA platform using Raspberry Pi 3, DWC hydroponics, LED grow lights, and IoT-based climate control via Adafruit IO. Closed-loop control for temperature, humidity, and pH using sensors (DHT22, DS18B20, pH) and actuators (Peltier, humidifier, peristaltic pumps).
+                <ul>
+                    <li><strong>95% less water</strong> consumption vs. conventional farming</li>
+                    <li><strong>30–50% faster</strong> growth rate than soil-grown plants</li>
+                    <li>Remote monitoring &amp; control via Adafruit IO dashboard</li>
+                </ul>
+                <a class="card-link" href="https://github.com/amalsant19-web/Plant-Box" target="_blank">🔗 View on GitHub</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🤖 FRIDA Chatbot — AI for Radicalization Detection</div>
+                    <div class="card-subtitle">Python · FastAPI · Streamlit · Docker · LLM</div>
+                </div>
+                <div class="card-date">University Project</div>
+            </div>
+            <div class="card-body">
+                Bilingual (EN/DE) AI chatbot for early detection of radicalization using LLMs, VADER sentiment analysis, hate speech classification, and keyword extraction. Full-stack architecture with FastAPI backend, Streamlit UI, and Docker deployment. Includes user evaluation using UEQ+ methodology.
+                <a class="card-link" href="https://github.com/amalsant19-web/Chatbot-to-detect-Radicalization" target="_blank">🔗 View on GitHub</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">⚙️ Automation Lab — Temperature Control System</div>
+                    <div class="card-subtitle">MATLAB · Simulink · OPC UA · Node-RED</div>
+                </div>
+                <div class="card-date">University Lab</div>
+            </div>
+            <div class="card-body">
+                System identification (Least Squares, Tangent, Schwarze methods), PID controller design &amp; tuning (Ziegler-Nichols, TΣ, Opelt rules), frequency domain analysis, and industrial automation with OPC UA information modeling and Node-RED flow-based monitoring.
+                <a class="card-link" href="https://github.com/amalsant19-web/Automation-Lab" target="_blank">🔗 View on GitHub</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">📊 DIP Lab — Digital Signal Processing</div>
+                    <div class="card-subtitle">Python · NumPy · Matplotlib · DSP</div>
+                </div>
+                <div class="card-date">University Lab</div>
+            </div>
+            <div class="card-body">
+                Five modules covering sampling &amp; reconstruction, FFT/spectral analysis, STFT/spectrograms/phase vocoder, ECG signal filtering, and DTMF telecommunication signal decoding.
+                <a class="card-link" href="https://github.com/amalsant19-web/DIP-lab" target="_blank">🔗 View on GitHub</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🧤 Assistive Hand Gesture Glove</div>
+                    <div class="card-subtitle">Arduino · IMU · Kalman Filter · 1-D CNN</div>
+                </div>
+                <div class="card-date">Seminar (Dec 2020)</div>
+            </div>
+            <div class="card-body">
+                Seminar on hand gesture recognition for hearing/speech impaired using IMU sensors (accelerometer + gyroscope), Kalman filtering for noise suppression, and 1-D Convolutional Neural Network for sign language classification. Output displayed as text and audio on smartphone via Bluetooth.
+                <a class="card-link" href="https://github.com/amalsant19-web/Assistive-Hand-Gesture-Glove" target="_blank">🔗 View on GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+        <h3 class="section-title"><span class="icon">🔧</span> Technical Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>Control Systems</h4>
+                <p>PID controller design, system identification, frequency domain analysis, closed-loop control, loop shaping</p>
+            </div>
+            <div class="skill-card">
+                <h4>Embedded &amp; IoT</h4>
+                <p>Raspberry Pi, Arduino, ESP8266, sensor integration, Adafruit IO, relay control, Peltier modules</p>
+            </div>
+            <div class="skill-card">
+                <h4>Signal Processing</h4>
+                <p>FFT, DFT, STFT, filtering, Kalman filter, audio processing, ECG analysis, DTMF</p>
+            </div>
+            <div class="skill-card">
+                <h4>Software &amp; Tools</h4>
+                <p>Python, SQL, MATLAB, Simulink, C/C++, Git, Docker, FastAPI, Streamlit</p>
+            </div>
+            <div class="skill-card">
+                <h4>AI / ML</h4>
+                <p>1-D CNN, LLM integration, VADER sentiment analysis, classification, prompt engineering</p>
+            </div>
+            <div class="skill-card">
+                <h4>Automation</h4>
+                <p>OPC UA, Node-RED, UaModeler, industrial IoT, real-time monitoring</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <h3 class="section-title"><span class="icon">🎓</span> Education</h3>
+
+        <div class="card">
+            <div class="edu-item">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">M.Sc. Electrical Engineering and Information Technology</div>
+                        <div class="card-subtitle">Otto-von-Guericke University (OVGU), Magdeburg, Germany</div>
+                    </div>
+                    <div class="card-date">Oct 2023 – Present</div>
+                </div>
+                <div class="card-body">
+                    <p>GPA: 2.8 | Focus: Control Engineering, Signal Processing</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="edu-item">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">B.Tech. Electrical and Electronics Engineering</div>
+                        <div class="card-subtitle">Mar Baselios College of Engineering and Technology, Trivandrum, Kerala, India</div>
+                    </div>
+                    <div class="card-date">2017 – 2021</div>
+                </div>
+                <div class="card-body">
+                    <p>GPA: 2.3 | APJ Abdul Kalam Technological University (KTU)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="section">
+        <h3 class="section-title"><span class="icon">🌍</span> Languages</h3>
+        <div class="tags">
+            <span class="tag">🇬🇧 English — Fluent</span>
+            <span class="tag">🇩🇪 German — Intermediate</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>Amal Santhosh Kumar — <a href="mailto:amalsant19@gmail.com">amalsant19@gmail.com</a></p>
+    <p style="margin-top: 4px;">Magdeburg, Germany</p>
+</div>
+
+</body>
+</html>
